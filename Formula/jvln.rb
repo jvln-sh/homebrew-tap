@@ -34,9 +34,9 @@ class Jvln < Formula
     if OS.mac?
       libexec.install "jvln"
       (bin/"jvln").write <<~EOS
-      #!/bin/bash
-      export DYLD_FALLBACK_LIBRARY_PATH="#{HOMEBREW_PREFIX}/lib:$DYLD_FALLBACK_LIBRARY_PATH"
-      exec "#{libexec}/jvln" "$@"
+        #!/bin/bash
+        export DYLD_FALLBACK_LIBRARY_PATH="#{HOMEBREW_PREFIX}/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+        exec "#{libexec}/jvln" "$@"
       EOS
     else
       bin.install "jvln"
