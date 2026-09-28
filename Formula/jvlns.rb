@@ -44,7 +44,7 @@ class Jvlns < Formula
   end
 
   post_install_steps do
-    system "bin/jvlns", "--init"
+    run "jvlns", args: ["--init"], base: :bin
   end
 
   test do
