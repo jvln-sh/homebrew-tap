@@ -43,7 +43,7 @@ class Jvlns < Formula
     end
   end
 
-  def post_install_steps
+  post_install_steps do
     system "bin/jvlns", "--init"
   end
 
