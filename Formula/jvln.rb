@@ -1,12 +1,14 @@
 # SPDX-FileCopyrightText: 2026 Adam Shirt <adamshirt@outlook.com>
 # SPDX-FileCopyrightText: 2026 Jvln Contributors
-# 
+#
 # SPDX-License-Identifier: AGPL-3.0-only
 
 class Jvln < Formula
   desc "Expose local services to the internet securely"
   homepage "https://www.jvln.sh"
   version "0.1.0"
+  license "AGPL-3.0-only"
+  depends_on "libmsquic"
 
   on_macos do
     if Hardware::CPU.arm?
@@ -28,22 +30,20 @@ class Jvln < Formula
     end
   end
 
-  depends_on "libmsquic"
-
   def install
     if OS.mac?
-        libexec.install "jvln"
-        (bin/"jvln").write <<~EOS
-        #!/bin/bash
-        export DYLD_FALLBACK_LIBRARY_PATH="#{HOMEBREW_PREFIX}/lib:$DYLD_FALLBACK_LIBRARY_PATH"
-        exec "#{libexec}/jvln" "$@"
-        EOS
+      libexec.install "jvln"
+      (bin/"jvln").write <<~EOS
+      #!/bin/bash
+      export DYLD_FALLBACK_LIBRARY_PATH="#{HOMEBREW_PREFIX}/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+      exec "#{libexec}/jvln" "$@"
+      EOS
     else
-        bin.install "jvln"
+      bin.install "jvln"
     end
   end
 
   test do
-    system "#{bin}/jvln", "--version"
+    system "bin/jvln", "--version"
   end
 end
