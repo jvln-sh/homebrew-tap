@@ -6,7 +6,7 @@
 class Jvln < Formula
   desc "Expose local services to the internet securely"
   homepage "https://www.jvln.sh"
-  version "0.1.0"
+  version "0.1.1"
   license "AGPL-3.0-only"
   depends_on "libmsquic"
 
