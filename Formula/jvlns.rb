@@ -6,27 +6,27 @@
 class Jvlns < Formula
   desc "Reverse proxy tunnel server for jvln"
   homepage "https://www.jvln.sh"
-  version "0.1.3"
+  version "0.1.4"
   license "AGPL-3.0-only"
   depends_on "libmsquic"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.3/jvlns-osx-arm64.tar.gz"
-      sha256 "10cfbc872174d90fc352b3240c5ac7b26b77bf83ad0be8c98150be2af3382c47"
+      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.4/jvlns-osx-arm64.tar.gz"
+      sha256 "df97e5c49a96418f415e8f5dc5ab9678f83b8efe709bf127a050e47efab2d627"
     else
-      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.3/jvlns-osx-x64.tar.gz"
-      sha256 "78f5bb956226aefbd8d8d1a879d84b716ef7fe9107ee851639326d11e668e9cb"
+      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.4/jvlns-osx-x64.tar.gz"
+      sha256 "5590e9b5624d87712aa6c0d6a54113e2f41a97c996059ae8e4528caa91d15069"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.3/jvlns-linux-arm64.tar.gz"
-      sha256 "bee44d3433008c4c897b7aae3fa5d56d201204ea383d9a93c88e3ebc7661f527"
+      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.4/jvlns-linux-arm64.tar.gz"
+      sha256 "55d888b275a739dc6a2e1f58634ec4a0252bff7e93b7a7a21d24721db2fec8f4"
     else
-      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.3/jvlns-linux-arm64.tar.gz"
-      sha256 "4f69c1f7c6dd87fc8fc345cf4ec8ce3c0223f4a68de5cf0f7be9e9c230c39b32"
+      url "https://codeberg.org/drmathias/jvln/releases/download/server@v0.1.4/jvlns-linux-arm64.tar.gz"
+      sha256 "78ce2890a684bbe9bec355b4643555c23f499373a9a39582cc44b84d041c9016"
     end
   end
 
