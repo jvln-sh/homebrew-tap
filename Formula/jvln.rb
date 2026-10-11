@@ -6,27 +6,27 @@
 class Jvln < Formula
   desc "Expose local services to the internet securely"
   homepage "https://www.jvln.sh"
-  version "0.2.0"
+  version "0.2.1"
   license "AGPL-3.0-only"
   depends_on "libmsquic"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.0/jvln-osx-arm64.tar.gz"
-      sha256 "f9f9642d60d602589c9542724551c2a47b4117e06077082e142f870a3ee1f6a1"
+      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.1/jvln-osx-arm64.tar.gz"
+      sha256 "d671b0ebac96b8859b71c68da2511d0a66bf81244abd935c367a4b3280a25a4b"
     else
-      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.0/jvln-osx-x64.tar.gz"
-      sha256 "2749df31301c85b34c5b2d5e558d23de7324032cf37c126c866248ae9f770f99"
+      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.1/jvln-osx-x64.tar.gz"
+      sha256 "8c60946d618676ff210e65c184171127b34cbd443c0257bba4ba3d88cf30cc13"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.0/jvln-linux-arm64.tar.gz"
-      sha256 "aa976a37d133d9f8c212cbe3abb83ed6e1cf09b16ae6d9e6c63a39d997994ecc"
+      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.1/jvln-linux-arm64.tar.gz"
+      sha256 "8ae4f80c403ff46bc3319ded5177defce0f52c927e5cd099f8aec8ecfa2656c4"
     else
-      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.0/jvln-linux-x64.tar.gz"
-      sha256 "9e8969981496694719ab3f836a501681e345c749c2f7366df2c374b335efa38e"
+      url "https://codeberg.org/drmathias/jvln/releases/download/cli@v0.2.1/jvln-linux-x64.tar.gz"
+      sha256 "ffdb3be5d7d44b749e27345ea7abc44ff826675b2480624574bdb1e3e4ff15d4"
     end
   end
 
